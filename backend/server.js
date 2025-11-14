@@ -26,7 +26,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // ----------------- TEST -----------------
-app.get("/", (req, res) => res.send("Smart Recipe Generator Backend 🚀"));
+app.get("/api", (req, res) => res.send("Backend Working 🚀"));
 
 // ----------------- IDENTIFY -----------------
 app.post("/api/identify", upload.single("image"), async (req, res) => {
@@ -113,70 +113,13 @@ app.get("/api/favorites", (req, res) => {
   }
 });
 
-// ----------------- SUGGESTIONS -----------------
-app.get("/api/suggestions", (req, res) => {
-  try {
-    const recipes = JSON.parse(fs.readFileSync(RECIPES_FILE, "utf-8"));
-    let favorites = [];
-    if (fs.existsSync(FAVORITES_FILE)) favorites = JSON.parse(fs.readFileSync(FAVORITES_FILE, "utf-8"));
-    let ratings = {};
-    if (fs.existsSync(RATINGS_FILE)) ratings = JSON.parse(fs.readFileSync(RATINGS_FILE, "utf-8"));
-
-    const favoriteRecipes = recipes.filter((r) => favorites.includes(r.id));
-
-    let suggestedRecipes = [];
-    favoriteRecipes.forEach((fav) => {
-      const similar = recipes
-        .filter((r) => !favorites.includes(r.id))
-        .map((r) => {
-          const common = r.ingredients.filter((i) => fav.ingredients.includes(i));
-          return { ...r, commonCount: common.length, rating: ratings[r.id] || 0 };
-        })
-        .filter((r) => r.commonCount > 0);
-      suggestedRecipes.push(...similar);
-    });
-
-    const unique = [];
-    const ids = new Set();
-    suggestedRecipes.forEach((r) => {
-      if (!ids.has(r.id)) {
-        ids.add(r.id);
-        unique.push(r);
-      }
-    });
-
-    unique.sort((a, b) => b.commonCount - a.commonCount || b.rating - a.rating);
-
-    res.json({ suggestions: unique.slice(0, 5) });
-  } catch (err) {
-    console.error("Error fetching suggestions:", err);
-    res.status(500).json({ error: "Error fetching suggestions" });
-  }
-});
-
-// ----------------- RATINGS -----------------
-app.post("/api/rate", (req, res) => {
-  const { recipeId, rating } = req.body;
-  if (!recipeId || rating == null) return res.status(400).json({ error: "Missing data" });
-
-  let ratings = {};
-  if (fs.existsSync(RATINGS_FILE)) ratings = JSON.parse(fs.readFileSync(RATINGS_FILE, "utf-8"));
-
-  ratings[recipeId] = rating;
-  fs.writeFileSync(RATINGS_FILE, JSON.stringify(ratings, null, 2));
-
-  res.json({ success: true });
-});
-
 // ----------------- MATCH RECIPES -----------------
 function matchRecipes(userIngredients, dietary, difficulty) {
   const data = JSON.parse(fs.readFileSync(RECIPES_FILE, "utf-8"));
 
-  // Filter by dietary and difficulty
   let filtered = dietary !== "none" ? data.filter((r) => r.dietary === dietary) : data;
   if (difficulty !== "none") filtered = filtered.filter((r) => r.difficulty === difficulty);
 
-  // Calculate match % and missing ingredients
   const scored = filtered.map((r) => {
     const recipeIngredientsLower = r.ingredients.map((i) => i.toLowerCase());
     const matchedIngredients = userIngredients.filter((ui) => recipeIngredientsLower.includes(ui));
@@ -191,10 +134,19 @@ function matchRecipes(userIngredients, dietary, difficulty) {
     };
   });
 
-  // Sort by matchPercentage descending
   scored.sort((a, b) => b.matchPercentage - a.matchPercentage);
 
-  return scored.slice(0, 10); // return top 10 matches
+  return scored.slice(0, 10);
 }
 
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+// ----------------- FRONTEND SERVE -----------------
+
+// Serve React build folder
+app.use(express.static(path.join(__dirname, "build")));
+
+// Any unknown route → send React index.html
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
