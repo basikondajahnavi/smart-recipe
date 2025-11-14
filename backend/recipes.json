@@ -1,0 +1,381 @@
+[
+  {
+    "id": 1,
+    "name": "Tomato Pasta",
+    "ingredients": ["tomato", "pasta", "olive oil", "salt", "garlic"],
+    "instructions": [
+      "Boil water in a large pot, add salt, and cook pasta until al dente.",
+      "Heat olive oil in a pan, sauté garlic and tomatoes.",
+      "Mix cooked pasta with the tomato sauce.",
+      "Simmer for 2-3 minutes.",
+      "Serve hot with grated cheese."
+    ],
+    "nutrition": { "calories": 300, "protein": 10 },
+    "rating": 4.5,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 20,
+    "default_servings": 1,
+    "image": "https://plus.unsplash.com/premium_photo-1664478288635-b9703a502393?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dG9tYXRvJTIwcGFzdGF8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    "id": 2,
+    "name": "Veg Fried Rice",
+    "ingredients": ["rice", "carrot", "peas", "soy sauce", "spring onion"],
+    "instructions": [
+      "Cook rice and let it cool.",
+      "Sauté chopped vegetables in oil.",
+      "Add rice and soy sauce to the vegetables.",
+      "Mix well and stir-fry for 5 minutes.",
+      "Garnish with spring onion and serve hot."
+    ],
+    "nutrition": { "calories": 250, "protein": 8 },
+    "rating": 4.2,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 25,
+    "default_servings": 1,
+    "image": "https://images.unsplash.com/photo-1664717698774-84f62382613b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHZlZmclMjBmcmllZCUyMHJpY2V8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    "id": 3,
+    "name": "Omelette",
+    "ingredients": ["egg", "onion", "salt", "oil", "pepper"],
+    "instructions": [
+      "Beat eggs with salt and pepper.",
+      "Heat oil in a pan and sauté onions.",
+      "Pour the beaten eggs into the pan.",
+      "Cook until set and fold.",
+      "Serve hot with toast."
+    ],
+    "nutrition": { "calories": 200, "protein": 12 },
+    "rating": 4.7,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 10,
+    "default_servings": 1,
+    "image": "https://images.unsplash.com/photo-1646579933415-92109f9805df?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b21sZXR0ZXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 4,
+    "name": "Cheese Pizza",
+    "ingredients": ["pizza dough", "cheese", "tomato sauce", "olive oil", "oregano"],
+    "instructions": [
+      "Preheat oven to 200°C.",
+      "Roll out pizza dough and spread tomato sauce.",
+      "Add cheese and drizzle olive oil.",
+      "Sprinkle oregano and bake for 15-20 minutes.",
+      "Serve hot."
+    ],
+    "nutrition": { "calories": 400, "protein": 15 },
+    "rating": 4.8,
+    "dietary": "vegetarian",
+    "difficulty": "medium",
+    "cookingTime": 30,
+    "default_servings": 1,
+    "image": "https://images.pexels.com/photos/4109072/pexels-photo-4109072.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Pepperoni Pizza",
+    "ingredients": ["pizza dough", "pepperoni", "cheese", "tomato sauce", "olive oil"],
+    "instructions": [
+      "Preheat oven to 200°C.",
+      "Roll out dough and spread tomato sauce.",
+      "Add cheese and pepperoni slices.",
+      "Drizzle olive oil and bake 20-25 minutes.",
+      "Serve hot."
+    ],
+    "nutrition": { "calories": 450, "protein": 18 },
+    "rating": 4.9,
+    "dietary": "non-vegetarian",
+    "difficulty": "medium",
+    "cookingTime": 35,
+    "default_servings": 1,
+    "image": "https://images.pexels.com/photos/31587840/pexels-photo-31587840.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Banana Smoothie",
+    "ingredients": ["banana", "milk", "honey", "ice", "yogurt"],
+    "instructions": [
+      "Peel and slice banana.",
+      "Add banana, milk, honey, yogurt, and ice to blender.",
+      "Blend until smooth.",
+      "Pour into glass and serve chilled."
+    ],
+    "nutrition": { "calories": 180, "protein": 5 },
+    "rating": 4.3,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 5,
+    "default_servings": 1,
+    "image": "https://www.allrecipes.com/thmb/kxoD3dghe_cR58zI2pccBfAe-Dk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6236089-780238d875594b00871a5cbbd37a8a36.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Grilled Chicken",
+    "ingredients": ["chicken breast", "spices", "oil", "lemon", "garlic"],
+    "instructions": [
+      "Marinate chicken with spices, lemon, and garlic.",
+      "Preheat grill or pan.",
+      "Grill chicken until fully cooked.",
+      "Rest for 5 minutes.",
+      "Serve hot with salad."
+    ],
+    "nutrition": { "calories": 350, "protein": 30 },
+    "rating": 4.6,
+    "dietary": "non-vegetarian",
+    "difficulty": "medium",
+    "cookingTime": 40,
+    "default_servings": 1,
+    "image": "https://images.pexels.com/photos/12365244/pexels-photo-12365244.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Burger",
+    "ingredients": ["burger bun", "tomato", "mozzarella", "basil", "olive oil"],
+    "instructions": [
+      "Slice tomato and mozzarella.",
+      "Layer tomato, cheese, and basil on bun.",
+      "Drizzle olive oil.",
+      "Assemble the burger.",
+      "Serve immediately."
+    ],
+    "nutrition": { "calories": 220, "protein": 10 },
+    "rating": 4.4,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 10,
+    "default_servings": 1,
+    "image": "https://images.pexels.com/photos/327158/pexels-photo-327158.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Cup Cake",
+    "ingredients": ["flour", "milk", "egg", "sugar", "baking powder"],
+    "instructions": [
+      "Preheat oven to 180°C.",
+      "Mix flour, sugar, eggs, milk, and baking powder.",
+      "Pour batter into cupcake molds.",
+      "Bake for 15-20 minutes.",
+      "Cool and serve with frosting."
+    ],
+    "nutrition": { "calories": 300, "protein": 8 },
+    "rating": 4.5,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 20,
+    "default_servings": 1,
+    "image": "https://images.pexels.com/photos/1026123/pexels-photo-1026123.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Veg Sandwich",
+    "ingredients": ["bread", "lettuce", "tomato", "cheese", "mayonnaise"],
+    "instructions": [
+      "Toast the bread slices.",
+      "Spread mayonnaise on bread.",
+      "Layer lettuce, tomato, and cheese.",
+      "Close sandwich and cut into halves.",
+      "Serve immediately."
+    ],
+    "nutrition": { "calories": 250, "protein": 9 },
+    "rating": 4.2,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 10,
+    "default_servings": 1,
+    "image": "https://cdn.dotpe.in/longtail/item_thumbnails/9020272/jIH8011o-720-720.webp"
+  },
+  {
+    "id": 11,
+    "name": "Tandoori Chicken",
+    "ingredients": ["chicken", "yogurt", "spices", "lemon", "garlic"],
+    "instructions": [
+      "Marinate chicken with yogurt, spices, lemon, and garlic for 2 hours.",
+      "Preheat oven or grill.",
+      "Cook chicken until fully done.",
+      "Rest for 5 minutes.",
+      "Serve with salad or naan."
+    ],
+    "nutrition": { "calories": 320, "protein": 28 },
+    "rating": 4.6,
+    "dietary": "non-vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 15,
+    "default_servings": 1,
+    "image": "https://www.kitchensanctuary.com/wp-content/uploads/2025/07/Tandoori-Chicken-Square-FS.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Fruit Salad",
+    "ingredients": ["apple", "banana", "orange", "grapes", "honey"],
+    "instructions": [
+      "Chop all fruits into bite-sized pieces.",
+      "Mix in a bowl with honey.",
+      "Toss gently to combine.",
+      "Chill for 10 minutes.",
+      "Serve fresh."
+    ],
+    "nutrition": { "calories": 150, "protein": 2 },
+    "rating": 4.5,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 10,
+    "default_servings": 1,
+    "image": "https://images.pexels.com/photos/29173110/pexels-photo-29173110.jpeg"
+  },
+  {
+    "id": 13,
+    "name": "Paneer Tikka",
+    "ingredients": ["paneer", "yogurt", "spices", "bell pepper", "onion"],
+    "instructions": [
+      "Cut paneer, bell pepper, and onion into cubes.",
+      "Marinate paneer and veggies in yogurt and spices for 30 mins.",
+      "Skewer paneer and vegetables.",
+      "Grill or bake until golden brown.",
+      "Serve hot with mint chutney."
+    ],
+    "nutrition": { "calories": 400, "protein": 25 },
+    "rating": 4.7,
+    "dietary": "vegetarian",
+    "difficulty": "medium",
+    "cookingTime": 35,
+    "default_servings": 1,
+    "image":"https://lentillovingfamily.com/wp-content/uploads/2025/08/paneer-tikka-2.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Chicken Biryani",
+    "ingredients": ["chicken", "rice", "onion", "tomato", "spices"],
+    "instructions": [
+      "Cook onions and tomatoes until soft.",
+      "Add spices and marinated chicken, cook until done.",
+      "Cook rice separately.",
+      "Layer rice and chicken mixture, cook on low heat.",
+      "Serve hot with raita."
+    ],
+    "nutrition": { "calories": 450, "protein": 35 },
+    "rating": 4.8,
+    "dietary": "non-vegetarian",
+    "difficulty": "medium",
+    "cookingTime": 40,
+    "default_servings": 1,
+    "image": "https://media.istockphoto.com/id/1345624336/photo/chicken-biriyani.webp?a=1&b=1&s=612x612&w=0&k=20&c=a8j_p9BkWtsSX7WkcqeetigH8PYWXGayIGto9GiehNY="
+  },
+  {
+    "id": 15,
+    "name": "Palak Paneer",
+    "ingredients": ["paneer", "spinach", "onion", "tomato", "spices"],
+    "instructions": [
+      "Blanch spinach and puree it.",
+      "Sauté onions and tomatoes in oil.",
+      "Add spinach puree and spices, cook for 5 mins.",
+      "Add paneer cubes and simmer for 5 mins.",
+      "Serve hot with naan or rice."
+    ],
+    "nutrition": { "calories": 300, "protein": 12 },
+    "rating": 4.3,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 15,
+    "default_servings": 1,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9Ewu9n-vUykEs-syvDgg_qsirar7boAJ7jg&s"
+  },
+  {
+    "id": 16,
+    "name": "Chocolate Cake",
+    "ingredients": ["flour", "cocoa powder", "sugar", "egg", "butter"],
+    "instructions": [
+      "Preheat oven to 180°C.",
+      "Mix flour, cocoa, sugar, eggs, and melted butter.",
+      "Pour batter into a greased baking pan.",
+      "Bake for 25–30 mins.",
+      "Cool and serve with chocolate frosting."
+    ],
+    "nutrition": { "calories": 400, "protein": 6 },
+    "rating": 4.9,
+    "dietary": "vegetarian",
+    "difficulty": "medium",
+    "cookingTime": 40,
+    "default_servings": 1,
+    "image": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg"
+  },
+  {
+    "id": 17,
+    "name": "Mango Smoothie",
+    "ingredients": ["mango", "milk", "honey", "ice", "yogurt"],
+    "instructions": [
+      "Peel and chop mango.",
+      "Add mango, milk, honey, yogurt, and ice to a blender.",
+      "Blend until smooth.",
+      "Pour into a glass.",
+      "Serve chilled."
+    ],
+    "nutrition": { "calories": 180, "protein": 5 },
+    "rating": 4.4,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 5,
+    "default_servings": 1,
+    "image": "https://www.cubesnjuliennes.com/wp-content/uploads/2021/04/Mango-Smoothie-Recipe.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Grilled Fish",
+    "ingredients": ["fish fillet", "spices", "lemon", "olive oil", "garlic"],
+    "instructions": [
+      "Marinate fish with spices, lemon juice, and garlic.",
+      "Preheat grill to medium heat.",
+      "Grill fish until cooked through.",
+      "Brush with olive oil while grilling.",
+      "Serve hot with lemon slices."
+    ],
+    "nutrition": { "calories": 300, "protein": 28 },
+    "rating": 4.7,
+    "dietary": "non-vegetarian",
+    "difficulty": "medium",
+    "cookingTime": 25,
+    "default_servings": 1,
+    "image": "https://images.pexels.com/photos/8112939/pexels-photo-8112939.jpeg"
+  },
+  {
+    "id": 19,
+    "name": "Sushi",
+    "ingredients": ["sushi rice", "nori sheets", "cucumber", "carrot", "avocado"],
+    "instructions": [
+      "Cook sushi rice and let it cool.",
+      "Place nori sheet on bamboo mat.",
+      "Spread rice evenly and add vegetables.",
+      "Roll tightly and slice into pieces.",
+      "Serve with soy sauce and wasabi."
+    ],
+    "nutrition": { "calories": 120, "protein": 4 },
+    "rating": 4.2,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 15,
+    "default_servings": 1,
+    "image": "https://images.pexels.com/photos/1199974/pexels-photo-1199974.jpeg"
+  },
+  {
+    "id": 20,
+    "name": "Bread Omelette",
+    "ingredients": ["bread", "egg", "butter", "salt", "pepper"],
+    "instructions": [
+      "Melt butter in a pan.",
+      "Beat eggs with salt and pepper.",
+      "Pour eggs into the pan and cook partially.",
+      "Place bread slices on top and cook until eggs are set.",
+      "Flip if needed and serve hot."
+    ],
+    "nutrition": { "calories": 180, "protein": 12 },
+    "rating": 4.5,
+    "dietary": "vegetarian",
+    "difficulty": "easy",
+    "cookingTime": 10,
+    "default_servings": 1,
+    "image": "https://images.pexels.com/photos/31329999/pexels-photo-31329999.jpeg"
+  }
+]
