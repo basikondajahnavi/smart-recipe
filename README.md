@@ -1,5 +1,5 @@
-                                                                🍲 Smart Recipe Generator
-
+ 🍲 Smart Recipe Generator
+                                                    
 The Smart Recipe Generator helps users discover recipes using the ingredients they already have.
 It accepts manual ingredient input and also supports automatic ingredient extraction from uploaded food images using the Clarifai AI API.
 
