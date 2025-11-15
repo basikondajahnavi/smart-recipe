@@ -1,26 +1,33 @@
-🍲 Smart Recipe Generator
-The Smart Recipe Generator is designed to help users discover recipes using the ingredients they already have. The system accepts manual ingredient input and also supports automatic ingredient extraction from uploaded food images using the Clarifai API. Extracted and typed ingredients are cleaned, filtered, and matched against a predefined recipe database of 20+ diverse recipes. A custom recipe-matching algorithm checks for ingredient similarity, cooking time, difficulty, and dietary categories. Each recipe includes detailed steps and nutritional information such as calories and protein.
+                                                                    🍲 Smart Recipe Generator
 
-The application also includes serving size adjustment, favorite recipe saving, rating-based recommendations, and ingredient substitution suggestions. Users can filter recipes by cooking time, difficulty, and dietary preference. The UI is fully mobile-responsive with an intuitive layout, autocomplete ingredient input, loading states, error handling, and smooth transitions to improve user experience.
+The Smart Recipe Generator helps users discover recipes using the ingredients they already have.
+It accepts manual ingredient input and also supports automatic ingredient extraction from uploaded food images using the Clarifai AI API.
 
-The project is built using React for the frontend, Node.js and Express for the backend, and Clarifai for AI-based ingredient recognition. It is deployed on Netlify/Vercel using free hosting services. The code follows a clean and modular structure for readability and maintenance.
-📌 Features
-✅ 1. User Input
+The system cleans and filters all extracted & typed ingredients, matches them against a 20+ recipe database, and ranks the best recipe results based on ingredient similarity, cooking time, difficulty level, and dietary category.
 
-Enter ingredients manually (autocomplete support).
+Each recipe includes detailed steps, nutritional information, serving size adjustment, and smart suggestions.
 
-Upload food images for automatic ingredient recognition (Clarifai API).
+Built with React (Frontend) + Node.js/Express (Backend) + Clarifai AI (Image Ingredient Detection).
 
-Choose dietary preferences: Vegetarian, Vegan, Gluten-Free, None.
+✨ Features
+✅ 1. User Input Options
+
+Manual ingredient entry (with autocomplete)
+
+Upload food images for automatic ingredient recognition
+
+Dietary preference selection: Vegetarian, Vegan, Gluten-Free, None
+
 ✅ 2. Recipe Generation
 
-Generates multiple recipes based on matching ingredients.
+Generates multiple recipe suggestions
 
-Includes step-by-step instructions.
+Step-by-step cooking instructions
 
-Shows nutritional details like calories, protein, etc.
+Includes detailed nutrition facts (calories, protein, etc.)
 
-View recipe in a full-screen, beautiful UI with background image.
+Beautiful full-screen recipe view with image & smooth UI
+
 ✅ 3. Filters & Customization
 
 Filter recipes by:
@@ -29,80 +36,99 @@ Difficulty: Easy / Medium / Hard
 
 Cooking Time: < 20 min / 20–40 min / > 40 min
 
-Adjust serving sizes (+ / – buttons).
+Serving Size: Increase/decrease dynamically
+
 ✅ 4. Recipe Database
 
-Contains 20+ predefined recipes.
+Includes 20+ curated recipes:
 
-Each recipe includes:
+Complete ingredient lists
 
-Ingredients list
+Cooking steps
 
-Instructions
+Nutrition details
 
-Nutrition facts
+Difficulty, cuisine style, time
 
-Difficulty, cuisine, time
+Default servings
 
-✅ 5. User Feedback
+✅ 5. User Feedback Features
 
-Add recipes to favorites ❤️
+Save recipes to favorites ❤️
 
 Remove from favorites
 
-User-based personalized suggestions
+Rating system for better suggestions
 
-Rating system for better recommendations
-✅ 6. UI/UX
+Personalized recipe recommendations
 
-Clean and modern design
+✅ 6. UI/UX Highlights
+
+Clean modern design
 
 Fully mobile responsive
 
-Autocomplete dropdown for ingredients
+Autocomplete ingredient dropdown
 
-Smooth animations
+Smooth animations and transitions
 
-🧠 Smart Suggestions
+Loading + error handling
 
-Suggests new recipes based on ingredient similarity to favorites
-🧠 Technical Features
-🔍 Ingredient Recognition
+🧠 Smart Features
+🔍 AI Ingredient Recognition
 
-Uses Clarifai Image Recognition API to detect ingredients from uploaded photos.
+Powered by Clarifai Image Recognition API
 
-🧮 Recipe Matching Logic
+Automatically extracts ingredients from uploaded food images
 
-Converts both user ingredients & recipe ingredients to lowercase.
+🧮 Advanced Recipe Matching Logic
 
-Matches based on ingredient intersections.
+Converts ingredients to lowercase
 
-Ensures no duplicates.
+Removes duplicates
 
-Suggests best match first.
+Finds intersection between user ingredients & recipe ingredients
+
+Ranks best matches first
 
 ♻️ Ingredient Substitution
 
-If an ingredient is missing, the app suggests common substitutes.
+Suggests alternatives when a required ingredient is unavailable.
 
 👨‍🍳 Detailed Recipe View
 
-Step-by-step instructions
+Steps
 
-Nutrition calculator (changes with serving size)
+Ingredients
 
-Ingredient list with missing items
+Nutrition facts
+
+Dynamic nutrition recalculation based on serving size
 
 🛠 Tech Stack
-Backend : Node.js+Express.js
-Multer (file upload)
-Clarifai API (image detection)
+Backend
+
+Node.js
+
+Express.js
+
+Multer (image upload)
+
+Clarifai API
+
 CORS
-File-based storage (JSON files)
-Frontend: React.js
+
+JSON-based storage
+
+Frontend
+
+React.js
+
 Axios
-Custom autocomplete
-Dynamic UI with serving size, filtering, and rating
+
+Custom Autocomplete
+
+Responsive UI + smooth animations
 
 🚀 Getting Started
 1️⃣ Clone the Repository
@@ -113,17 +139,15 @@ cd smart-recipe-generator
 2️⃣ Install Dependencies
 npm install express multer axios cors dotenv
 
-3️⃣ Add .env File
-
-Create a file named .env:
-
+3️⃣ Create .env File
 CLARIFAI_API_KEY=your_api_key_here
 PORT=5000
 
 4️⃣ Start Backend
 node server.js
 
-Backend runs at:
+
+Backend will run at:
 
 👉 http://localhost:5000
 
@@ -143,33 +167,33 @@ Frontend runs at:
 🔗 API Endpoints
 POST /api/identify
 
-Identify ingredients from text/image and return matching recipes.
+Identify ingredients (text/image) + return matching recipes.
 
 POST /api/favorite
 
-Add recipe to favorites.
+Save a recipe to favorites.
 
 POST /api/remove-favorite
 
-Remove recipe from favorites.
+Remove a recipe from favorites.
 
 GET /api/favorites
 
-Get saved favorite recipes.
+Get user favorite recipes.
 
 GET /api/suggestions
 
-Return AI-style suggestions based on similarity.
+Smart AI-style recommendations.
 
 POST /api/rate
 
-Save a rating for a recipe.
+Save a recipe rating.
 
 📸 Image Upload Notes
 
-Uploaded images are stored in /uploads
+Uploaded images stored in /uploads
 
-Only used temporarily for recognition
+Used only temporarily for ingredient recognition
 
 Clarifai model used: general-image-recognition
 
@@ -180,7 +204,7 @@ All recipes stored in:
 recipes.json
 
 
-Each record contains:
+Each recipe contains:
 
 name
 
@@ -196,7 +220,7 @@ dietary type
 
 difficulty
 
-time
+cooking time
 
 image URL
 
@@ -208,4 +232,4 @@ Pull requests are welcome!
 
 🛡 License
 
-This project is open-source under MIT License.
+This project is open-source under the MIT License.
